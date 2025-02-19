@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
-body {
-    @apply max-w-screen-lg mx-auto;
+html, body {
+    @apply max-w-screen-lg mx-auto scroll-smooth;
 }
