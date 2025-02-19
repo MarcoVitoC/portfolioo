@@ -2,16 +2,20 @@
 import IconEmail from "./icons/IconEmail.astro"
 import IconLinkedin from "./icons/IconLinkedin.astro"
 import IconGithub from "./icons/IconGithub.astro"
+import IconDownload from "./icons/IconDownload.astro"
 ---
 
 <section class="h-screen flex justify-center items-center" id="hero">
 	<div>
         <h1 class="text-xl">Hey there 👋, I'm Marco</h1>
         <p class="text-6xl">A software engineer.</p>
-        <div class="flex justify-end gap-4 my-4">
+        <div class="flex justify-end items-center gap-4 my-4">
             <a href="mailto:marcovito.chr@gmail.com" target="_blank"><IconEmail /></a>
             <a href="https://www.linkedin.com/in/marcovitochristopher/" target="_blank"><IconLinkedin /></a>
             <a href="https://github.com/MarcoVitoC" target="_blank"><IconGithub /></a>
+            <a class="font-medium flex border-2 border-gray-200 rounded-md gap-2 p-2 hover:border-black" href="pdfs/Resume - Marco Vito Christopher.pdf" download>
+                Resume <span><IconDownload/></span>
+            </a>
         </div>
     </div>
 </section>
