@@ -1,8 +1,109 @@
+---
+import { Image } from "astro:assets";
+
+import nitflix from "../assets/Nitflix.png"
+import librariant from "../assets/Librariant.png"
+import trunt from "../assets/Trunt.png"
+import krabs from "../assets/Krabs.png"
+import bakeAndTake from "../assets/Bake and Take.png"
+import shortlr from "../assets/Shortlr.png"
+
+import IconReact from "./icons/IconReact.astro"
+import IconVite from "./icons/IconVite.astro"
+import IconTailwind from "./icons/IconTailwind.astro"
+import IconLaravel from "./icons/IconLaravel.astro"
+import IconLivewire from "./icons/IconLivewire.astro"
+import IconBootstrap from "./icons/IconBootstrap.astro"
+import IconJquery from "./icons/IconJquery.astro"
+import IconGo from "./icons/IconGo.astro"
+import IconTypeScript from "./icons/IconTypeScript.astro"
+import IconVue from "./icons/IconVue.astro"
+import IconPinia from "./icons/IconPinia.astro"
+import IconSpring from "./icons/IconSpring.astro"
+import IconPostgreSql from "./icons/IconPostgreSql.astro"
+import IconCSS from "./icons/IconCSS.astro"
+import IconJavaScript from "./icons/IconJavaScript.astro"
+import IconRedis from "./icons/IconRedis.astro"
+---
+
 <section id="projects">
     <h1 class="font-bold text-3xl py-3">🚀 Projects</h1>
-    <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque impedit aperiam nemo? Dolorem facilis a rem praesentium voluptatibus doloribus animi dolore necessitatibus dolores, qui minus inventore dignissimos porro harum vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta beatae repellat provident voluptate laborum minus aperiam cupiditate possimus quidem officiis repellendus assumenda accusantium corporis blanditiis necessitatibus laboriosam, id repudiandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas delectus tempora asperiores, laborum iure voluptas omnis possimus laboriosam dolores totam ab sunt voluptates quia inventore sit? Accusantium amet alias rem! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore mollitia quidem quos libero nihil dicta illo laudantium, obcaecati, consequuntur molestiae esse distinctio officia. Non explicabo reprehenderit facilis, vel cum quos!
-
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus corporis libero repellendus eligendi recusandae, placeat, beatae sequi dolorem aspernatur odit saepe ipsam? Praesentium nobis, quae repudiandae laboriosam nihil eius quis?
+    <div class="flex flex-wrap gap-5">
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/nitflix" target="_blank">
+                <Image class="rounded-md" src={nitflix} alt="Nitflix"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Nitflix</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconReact />
+                <IconVite />
+                <IconTailwind />
+            </div>
+        </div>
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/librariant" target="_blank">
+                <Image class="rounded-md" src={librariant} alt="Librariant"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Librariant</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconLaravel />
+                <IconLivewire />
+                <IconBootstrap />
+                <IconJquery />
+            </div>
+        </div>
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/shortlr" target="_blank">
+                <Image class="rounded-md" src={shortlr} alt="Shortlr"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Shortlr</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconGo />
+                <IconPostgreSql />
+                <IconRedis />
+            </div>
+        </div>
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/krabs-ui" target="_blank">
+                <Image class="rounded-md" src={krabs} alt="Krabs"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Krabs</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconTypeScript />
+                <IconVue />
+                <IconVite />
+                <IconPinia />
+                <IconTailwind />
+                <IconSpring />
+                <IconPostgreSql />
+            </div>
+        </div>
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/bake-and-take" target="_blank">
+                <Image class="rounded-md" src={bakeAndTake} alt="Bake and Take"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Bake and Take</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconLaravel />
+                <IconCSS />
+                <IconJavaScript />
+                <IconJquery />
+            </div>
+        </div>
+        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
+            <a href="https://github.com/MarcoVitoC/trunt" target="_blank">
+                <Image class="rounded-md" src={trunt} alt="Trunt"/>
+            </a>
+            <h1 class="font-bold text-xl my-3">Trunt</h1>
+            <h1 class="font-medium mb-1">Tech stack:</h1>
+            <div class="flex flex-wrap space-x-3 space-y-3">
+                <IconGo />
+            </div>
+        </div>
     </div>
 </section>
