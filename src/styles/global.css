@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@theme {
+    --font-display: "Palanquin", sans-serif;
+}
+
 html, body {
-    @apply max-w-screen-lg mx-auto scroll-smooth;
+    @apply max-w-screen-lg mx-auto scroll-smooth font-display;
 }
