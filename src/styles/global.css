@@ -3,8 +3,9 @@
 
 @theme {
     --font-display: "Palanquin", sans-serif;
+    --breakpoint-xs: 32rem;
 }
 
 html, body {
-    @apply max-w-screen-lg mx-auto scroll-smooth font-display;
+    @apply scroll-smooth font-display;
 }

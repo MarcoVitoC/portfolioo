@@ -25,87 +25,61 @@ import IconCSS from "./icons/IconCSS.astro"
 import IconJavaScript from "./icons/IconJavaScript.astro"
 import IconMySql from "./icons/IconMySql.astro"
 import IconRedis from "./icons/IconRedis.astro"
+
+const projects = [
+    {
+        name: 'Nitflix',
+        repository: 'https://github.com/MarcoVitoC/nitflix',
+        image: nitflix,
+        techStack: [IconReact, IconVite, IconTailwind]
+    },
+    {
+        name: 'Librariant',
+        repository: 'https://github.com/MarcoVitoC/librariant',
+        image: librariant,
+        techStack: [IconLaravel, IconLivewire, IconBootstrap, IconJquery]
+    },
+    {
+        name: 'Shortlr',
+        repository: 'https://github.com/MarcoVitoC/shortlr',
+        image: shortlr,
+        techStack: [IconGo, IconPostgreSql, IconRedis]
+    },
+    {
+        name: 'Krabs',
+        repository: 'https://github.com/MarcoVitoC/krabs-ui',
+        image: krabs,
+        techStack: [IconTypeScript, IconVue, IconVite, IconPinia, IconTailwind, IconSpring, IconPostgreSql]
+    },
+    {
+        name: 'Bake and Take',
+        repository: 'https://github.com/MarcoVitoC/bake-and-take',
+        image: bakeAndTake,
+        techStack: [IconLaravel, IconCSS, IconJavaScript, IconJquery, IconMySql]
+    },
+    {
+        name: 'Trunt',
+        repository: 'https://github.com/MarcoVitoC/trunt',
+        image: trunt,
+        techStack: [IconGo]
+    }
+]
 ---
 
-<section id="projects">
+<section class="mx-10 md:mx-20" id="projects">
     <h1 class="font-bold text-3xl py-5">🚀 Projects</h1>
-    <div class="flex flex-wrap gap-7">
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/nitflix" target="_blank">
-                <Image class="rounded-md" src={nitflix} alt="Nitflix"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Nitflix</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconReact />
-                <IconVite />
-                <IconTailwind />
-            </div>
-        </div>
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/librariant" target="_blank">
-                <Image class="rounded-md" src={librariant} alt="Librariant"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Librariant</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconLaravel />
-                <IconLivewire />
-                <IconBootstrap />
-                <IconJquery />
-            </div>
-        </div>
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/shortlr" target="_blank">
-                <Image class="rounded-md" src={shortlr} alt="Shortlr"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Shortlr</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconGo />
-                <IconPostgreSql />
-                <IconRedis />
-            </div>
-        </div>
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/krabs-ui" target="_blank">
-                <Image class="rounded-md" src={krabs} alt="Krabs"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Krabs</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconTypeScript />
-                <IconVue />
-                <IconVite />
-                <IconPinia />
-                <IconTailwind />
-                <IconSpring />
-                <IconPostgreSql />
-            </div>
-        </div>
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/bake-and-take" target="_blank">
-                <Image class="rounded-md" src={bakeAndTake} alt="Bake and Take"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Bake and Take</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconLaravel />
-                <IconCSS />
-                <IconJavaScript />
-                <IconJquery />
-                <IconMySql />
-            </div>
-        </div>
-        <div class="bg-gray-100 max-w-md h-auto rounded-md p-8">
-            <a href="https://github.com/MarcoVitoC/trunt" target="_blank">
-                <Image class="rounded-md" src={trunt} alt="Trunt"/>
-            </a>
-            <h1 class="font-bold text-xl my-3">Trunt</h1>
-            <h1 class="font-medium mb-1">Tech stack:</h1>
-            <div class="flex flex-wrap space-x-3 space-y-3">
-                <IconGo />
-            </div>
-        </div>
+    <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map(({name, repository, image, techStack}) => (
+            <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black">
+                <a href={repository} target="_blank">
+                    <Image class="rounded-md" src={image} alt={name}/>
+                </a>
+                <h1 class="font-bold text-xl my-3">{name}</h1>
+                <h1 class="font-medium mb-1">Tech stack:</h1>
+                <div class="flex flex-wrap space-x-3 space-y-3">
+                    {techStack.map((Icon) => <Icon/>)}
+                </div>
+            </div>   
+        ))}
     </div>
 </section>
