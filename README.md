@@ -1,2 +1,2 @@
-# Marco Vito Christopher - Software Engineer
+# 🤓 Marco Vito Christopher - Software Engineer
 A final year Computer Science student at BINUS University, specializing in Software Engineering. Passionate about crafting innovative solutions that drive efficiency and elevate user experiences. Proficient in software development with a profound grasp of programming languages, software development methodologies, and problem-solving techniques. Looking forward to applying this expertise to tackle real-world challenges and drive meaningful impact.
