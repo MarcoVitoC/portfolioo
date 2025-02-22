@@ -1,0 +1,36 @@
+---
+import { Icon } from "astro-icon/components"
+
+let icons = [
+  "c",
+  "cpp",
+  "html",
+  "css",
+  "bootstrap",
+  "tailwindcss-light",
+  "javascript",
+  "jquery",
+  "vuejs-light",
+  "pinia-light",
+  "java-light",
+  "spring-light",
+  "laravel-light",
+  "golang",
+  "mysql-light",
+  "postgresql-light",
+  "redis-light",
+  "git"
+]
+---
+
+<section class="mx-10 mb-20 md:mx-20" id="skills">
+  <h1 class="font-bold text-3xl py-5">🧠 Skills</h1>
+  <div class="flex overflow-hidden">
+    <div class="flex animate-infinite-scroll">
+      {icons.map((icon) => <Icon name={`skill-icons:${icon}`} size={70} class="mr-5" />)}
+    </div>
+    <div class="flex animate-infinite-scroll" aria-hidden="true">
+      {icons.map((icon) => <Icon name={`skill-icons:${icon}`} size={70} class="mr-5" />)}
+    </div>
+  </div>
+</section>

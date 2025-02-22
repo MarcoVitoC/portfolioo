@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components"
 
 import nitflix from "../assets/Nitflix.png"
 import librariant from "../assets/Librariant.png"
@@ -8,60 +9,50 @@ import krabs from "../assets/Krabs.png"
 import bakeAndTake from "../assets/Bake and Take.png"
 import shortlr from "../assets/Shortlr.png"
 
-import IconReact from "./icons/IconReact.astro"
-import IconVite from "./icons/IconVite.astro"
-import IconTailwind from "./icons/IconTailwind.astro"
-import IconLaravel from "./icons/IconLaravel.astro"
-import IconLivewire from "./icons/IconLivewire.astro"
-import IconBootstrap from "./icons/IconBootstrap.astro"
-import IconJquery from "./icons/IconJquery.astro"
-import IconGo from "./icons/IconGo.astro"
-import IconTypeScript from "./icons/IconTypeScript.astro"
-import IconVue from "./icons/IconVue.astro"
-import IconPinia from "./icons/IconPinia.astro"
-import IconSpring from "./icons/IconSpring.astro"
-import IconPostgreSql from "./icons/IconPostgreSql.astro"
-import IconCSS from "./icons/IconCSS.astro"
-import IconJavaScript from "./icons/IconJavaScript.astro"
-import IconMySql from "./icons/IconMySql.astro"
-import IconRedis from "./icons/IconRedis.astro"
-
 const projects = [
     {
         name: 'Nitflix',
         repository: 'https://github.com/MarcoVitoC/nitflix',
         image: nitflix,
-        techStack: [IconReact, IconVite, IconTailwind]
+        techStack: ["react-light", "vite-light", "tailwindcss-light"]
     },
     {
         name: 'Librariant',
         repository: 'https://github.com/MarcoVitoC/librariant',
         image: librariant,
-        techStack: [IconLaravel, IconLivewire, IconBootstrap, IconJquery]
+        techStack: ["laravel-light", "bootstrap", "jquery"]
     },
     {
         name: 'Shortlr',
         repository: 'https://github.com/MarcoVitoC/shortlr',
         image: shortlr,
-        techStack: [IconGo, IconPostgreSql, IconRedis]
+        techStack: ["golang", "postgresql-light", "redis-light"]
     },
     {
         name: 'Krabs',
         repository: 'https://github.com/MarcoVitoC/krabs-ui',
         image: krabs,
-        techStack: [IconTypeScript, IconVue, IconVite, IconPinia, IconTailwind, IconSpring, IconPostgreSql]
+        techStack: [
+            "typescript", 
+            "vuejs-light", 
+            "vite-light", 
+            "pinia-light", 
+            "tailwindcss-light", 
+            "spring-light", 
+            "postgresql-light"
+        ]
     },
     {
         name: 'Bake and Take',
         repository: 'https://github.com/MarcoVitoC/bake-and-take',
         image: bakeAndTake,
-        techStack: [IconLaravel, IconCSS, IconJavaScript, IconJquery, IconMySql]
+        techStack: ["laravel-light", "css", "javascript", "jquery", "mysql-light"]
     },
     {
         name: 'Trunt',
         repository: 'https://github.com/MarcoVitoC/trunt',
         image: trunt,
-        techStack: [IconGo]
+        techStack: ["golang"]
     }
 ]
 ---
@@ -70,14 +61,14 @@ const projects = [
     <h1 class="font-bold text-3xl py-5">🚀 Projects</h1>
     <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map(({name, repository, image, techStack}) => (
-            <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black">
+            <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black transition">
                 <a href={repository} target="_blank">
                     <Image class="rounded-md" src={image} alt={name}/>
                 </a>
                 <h1 class="font-bold text-xl my-3">{name}</h1>
                 <h1 class="font-medium mb-1">Tech stack:</h1>
                 <div class="flex flex-wrap space-x-3 space-y-3">
-                    {techStack.map((Icon) => <Icon/>)}
+                    {techStack.map((icon) => <Icon name={`skill-icons:${icon}`} size={35} />)}
                 </div>
             </div>   
         ))}
