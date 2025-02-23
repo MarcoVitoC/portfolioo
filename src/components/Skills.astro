@@ -26,10 +26,10 @@ let icons = [
 <section class="mx-10 mb-20 md:mx-20" id="skills">
   <h1 class="font-bold text-3xl py-5">🧠 Skills</h1>
   <div class="flex overflow-hidden">
-    <div class="flex animate-infinite-scroll">
+    <div class="flex animate-infinite-scroll -z-1">
       {icons.map((icon) => <Icon name={`skill-icons:${icon}`} size={70} class="mr-5" />)}
     </div>
-    <div class="flex animate-infinite-scroll" aria-hidden="true">
+    <div class="flex animate-infinite-scroll -z-1" aria-hidden="true">
       {icons.map((icon) => <Icon name={`skill-icons:${icon}`} size={70} class="mr-5" />)}
     </div>
   </div>

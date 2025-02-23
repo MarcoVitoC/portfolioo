@@ -1,12 +1,18 @@
 ---
-import { IconMail, IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-react';
+import { Icon } from "astro-icon/components"
 ---
 
 <section class="flex flex-col justify-between items-center mt-20 mx-8 py-5 sm:flex-row sm:mx-20">
     <h1 class="font-semibold">Made by Marco Vito Christopher</h1>
     <div class="flex gap-4 py-2 sm:py-0">
-        <a href="mailto:marcovito.chr@gmail.com" target="_blank"><IconMail /></a>
-        <a href="https://www.linkedin.com/in/marcovitochristopher/" target="_blank"><IconBrandLinkedin /></a>
-        <a href="https://github.com/MarcoVitoC" target="_blank"><IconBrandGithub /></a>
+        <a href="mailto:marcovito.chr@gmail.com" target="_blank" aria-label="email">
+            <Icon name="tabler:mail" size={24} />
+        </a>
+        <a href="https://www.linkedin.com/in/marcovitochristopher/" target="_blank" aria-label="linkedin">
+            <Icon name="tabler:brand-linkedin" size={24} />
+        </a>
+        <a href="https://github.com/MarcoVitoC" target="_blank" aria-label="github">
+            <Icon name="tabler:brand-github" size={24} />
+        </a>
     </div>
 </section>
