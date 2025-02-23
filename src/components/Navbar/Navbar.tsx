@@ -18,6 +18,7 @@ export default function Navbar() {
         role='button'
         onClick={handleNavbar} 
         className="bg-white absolute border-2 border-gray-200 rounded-full p-4 cursor-pointer transition duration-300 z-100 hover:text-white hover:bg-black hover:border-black"
+        aria-label='navbar'
       >
         {isNavbarOpen ? <IconX /> : <IconMenuDeep />}
       </button>
@@ -30,7 +31,7 @@ export default function Navbar() {
                 <a 
                 onClick={handleNavbar} 
                 href={href} 
-                className="block rounded-lg px-6 py-2 text-3xl sm:text-6xl font-semibold transition duration-300 hover:text-white hover:bg-black"
+                className="block rounded-lg px-6 py-2 text-3xl sm:text-6xl font-semibold tracking-wide transition duration-300 hover:-translate-x-5 hover:after:content-['👈']"
                 >
                   {name}
                 </a>
