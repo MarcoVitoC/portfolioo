@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import bslc from "../../assets/BSLC.jpg"
+
+const tasks = [
+  "The Mentor Scholarship is one of the scholarships offered by Binus University for students with academic excellence who are willing to improve the educational experience of their peers.",
+  "Mentors guide 3 to 9 students to enhance their learning process for better academic performance and maximize their potential in peer-to-peer sessions.",
+  "Conduct a minimum of 10 mentoring sessions per semester, each lasting approximately 60 to 100 minutes, covering diverse topics such as Algorithm and Programming, Algorithm Design and Analysis, Object-Oriented Programming, and Data Structures to address individual learning needs effectively. ",
+  "Provide academic resources and information relevant to the subjects being studied."
+]
+---
+
+<article>
+  <header class="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center mb-5">
+    <div class="flex items-center gap-5">
+        <Image class="rounded-md w-20 xs:w-24" src={bslc} alt="BSLC" />
+        <div>
+            <h1 class="font-bold text-lg xs:text-xl">Scholarship Mentor</h1>
+            <p class="font-medium">Binus Student Learning Community | Contract</p>
+        </div>
+    </div>
+    <p class="font-medium text-lg mb-5 lg:mb-0">October 2022 - January 2024</p>
+  </header>
+  <div class="font-medium space-y-3">
+    {tasks.map((task) => 
+      <div class="flex gap-2 text-lg">
+        <p>•</p>
+        <p>{task}</p>
+      </div>
+    )}
+  </div>
+</article>

@@ -9,7 +9,7 @@ export default function Navbar() {
     { href: "#hello", name: "Hello" },
     { href: "#skills", name: "Skills" },
     { href: "#projects", name: "Projects" },
-    // { href: "#experiences", name: "Experiences" }
+    { href: "#experiences", name: "Experiences" }
   ]
 
   return (

@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import blibli from "../../assets/Blibli.svg"
+
+const tasks = [
+  "Contributed to both frontend and backend roles in the internal migration and development of the Content Management System (CMS) as a part of the Customer Experience team, Engagement squad.",
+  "Designed and implemented scalable CMS and customer-facing APIs to optimize data exchange and ensure seamless migration, enhancing system reliability and performance.",
+  "Revamped the CMS user interface for responsiveness and usability, improving the experience for internal users.",
+  "Developed and executed 20+ unit and integration test cases with a 100% pass rate, ensuring robust functionality and reliability across frontend and backend services.",
+  "Collaborated with team members in code reviews to ensure clean and maintainable code, reducing critical bugs and error rates.",
+  "Managed frontend and backend Jira tickets, ensuring timely resolution and Scrum alignment.",
+  "Collaborated with the development team to revamp and optimize a key component of the promotion page, improving user experience and engagement.",
+  "Coordinated with QA (Quality Assurance) to identify and resolve critical bugs, enhancing system performance and minimizing error rates."
+]
+---
+
+<article>
+  <header class="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-center mb-5">
+    <div class="flex items-center gap-5">
+        <Image class="rounded-md w-24 xs:w-30" src={blibli} alt="Blibli.com" />
+        <div>
+            <h1 class="font-bold text-lg xs:text-xl">Software Engineer Intern</h1>
+            <p class="font-medium">Blibli.com | Internship</p>
+        </div>
+    </div>
+    <p class="font-medium text-lg mb-5 lg:mb-0">February 2024 - February 2025</p>
+  </header>
+  <div class="font-medium space-y-3">
+    {tasks.map((task) => 
+      <div class="flex gap-2 text-lg">
+        <p>•</p>
+        <p>{task}</p>
+      </div>
+    )}
+  </div>
+</article>

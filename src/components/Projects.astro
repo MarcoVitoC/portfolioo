@@ -12,24 +12,28 @@ import shortlr from "../assets/Shortlr.png"
 const projects = [
     {
         name: 'Nitflix',
+        description: 'Nitflix is a simple responsive movie trailer app based on the Netflix app UI design.',
         repository: 'https://github.com/MarcoVitoC/nitflix',
         image: nitflix,
         techStack: ["react-light", "vite-light", "tailwindcss-light"]
     },
     {
         name: 'Librariant',
+        description: 'A library management system integrated with a bit of social networking.',
         repository: 'https://github.com/MarcoVitoC/librariant',
         image: librariant,
         techStack: ["laravel-light", "bootstrap", "jquery"]
     },
     {
         name: 'Shortlr',
+        description: 'As mentioned, it is a simple RESTful API for shortening URLs.',
         repository: 'https://github.com/MarcoVitoC/shortlr',
         image: shortlr,
         techStack: ["golang", "postgresql-light", "redis-light"]
     },
     {
         name: 'Krabs',
+        description: 'A full-stack trial app for expense tracking, built with Vue.js and Spring Boot.',
         repository: 'https://github.com/MarcoVitoC/krabs-ui',
         image: krabs,
         techStack: [
@@ -44,12 +48,14 @@ const projects = [
     },
     {
         name: 'Bake and Take',
+        description: 'First ever project! An experimental cake e-commerce website.',
         repository: 'https://github.com/MarcoVitoC/bake-and-take',
         image: bakeAndTake,
         techStack: ["laravel-light", "css", "javascript", "jquery", "mysql-light"]
     },
     {
         name: 'Trunt',
+        description: 'A CLI treasure hunt game where bombs shift every 5 seconds. Reach the goal or lose — test your luck! 🙂',
         repository: 'https://github.com/MarcoVitoC/trunt',
         image: trunt,
         techStack: ["golang"]
@@ -57,16 +63,17 @@ const projects = [
 ]
 ---
 
-<section class="mx-10 md:mx-20" id="projects">
-    <h1 class="font-bold text-3xl py-5">🚀 Projects</h1>
+<section class="mx-10 mb-20 md:mx-20" id="projects">
+    <h1 class="font-bold text-center text-3xl sm:text-start lg:text-4xl py-5">🚀 Projects</h1>
     <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map(({name, repository, image, techStack}) => (
+        {projects.map(({name, description, repository, image, techStack}) => (
             <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black transition">
                 <a href={repository} target="_blank">
-                    <Image class="rounded-md" src={image} alt={name}/>
+                    <Image class="rounded-md" src={image} alt={name} loading="lazy" />
                 </a>
-                <h1 class="font-bold text-xl my-3">{name}</h1>
-                <h1 class="font-medium mb-1">Tech stack:</h1>
+                <p class="font-bold text-2xl my-3">{name}</p>
+                <p class="font-semibold text-lg my-3">{description}</p>
+                <p class="font-medium mb-1">Tech stack:</p>
                 <div class="flex flex-wrap space-x-3 space-y-3">
                     {techStack.map((icon) => <Icon name={`skill-icons:${icon}`} size={35} />)}
                 </div>
