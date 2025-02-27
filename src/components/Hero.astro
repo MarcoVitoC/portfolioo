@@ -1,5 +1,8 @@
 ---
-import { Icon } from "astro-icon/components"
+import IconMail from "./icons/IconMail.astro"
+import IconLinkedin from "./icons/IconLinkedin.astro"
+import IconGithub from "./icons/IconGithub.astro"
+import IconDownload from "./icons/IconDownload.astro"
 ---
 
 <section class="h-screen flex justify-center items-center" id="hello">
@@ -8,13 +11,13 @@ import { Icon } from "astro-icon/components"
         <p class="font-bold text-3xl xs:text-5xl md:text-6xl">A software engineer.</p>
         <div class="flex justify-center items-center gap-4 my-4 xs:justify-end">
             <a href="mailto:marcovito.chr@gmail.com" target="_blank" aria-label="email">
-                <Icon name="tabler:mail" size={24} />
+                <IconMail />
             </a>
             <a href="https://www.linkedin.com/in/marcovitochristopher/" target="_blank" aria-label="linkedin">
-                <Icon name="tabler:brand-linkedin" size={24} />
+                <IconLinkedin />
             </a>
             <a href="https://github.com/MarcoVitoC" target="_blank" aria-label="github">
-                <Icon name="tabler:brand-github" size={24} />
+                <IconGithub />
             </a>
             <a 
                 class="font-semibold flex border-2 border-gray-200 rounded-md gap-2 p-2 hover:border-black transition" 
@@ -22,7 +25,7 @@ import { Icon } from "astro-icon/components"
                 download
                 aria-label="download"
             >
-                Resume <Icon name="tabler:download" class="size-6 animate-bounce -z-1" />
+                Resume <span class="size-6 animate-bounce -z-1"><IconDownload/></span>
             </a>
         </div>
     </div>

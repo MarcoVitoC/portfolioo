@@ -1,18 +1,20 @@
 ---
-import { Icon } from "astro-icon/components"
+import IconMail from "./icons/IconMail.astro"
+import IconLinkedin from "./icons/IconLinkedin.astro"
+import IconGithub from "./icons/IconGithub.astro"
 ---
 
 <section class="flex flex-col justify-between items-center mt-20 mx-8 py-5 sm:flex-row sm:mx-20">
     <h1 class="font-semibold text-lg">Made by Marco Vito Christopher</h1>
     <div class="flex gap-4 py-2 sm:py-0">
         <a href="mailto:marcovito.chr@gmail.com" target="_blank" aria-label="email">
-            <Icon name="tabler:mail" size={24} />
+            <IconMail />
         </a>
         <a href="https://www.linkedin.com/in/marcovitochristopher/" target="_blank" aria-label="linkedin">
-            <Icon name="tabler:brand-linkedin" size={24} />
+            <IconLinkedin />
         </a>
         <a href="https://github.com/MarcoVitoC" target="_blank" aria-label="github">
-            <Icon name="tabler:brand-github" size={24} />
+            <IconGithub />
         </a>
     </div>
 </section>
