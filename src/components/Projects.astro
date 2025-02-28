@@ -63,11 +63,11 @@ const projects = [
 ]
 ---
 
-<section class="mx-10 mb-20 md:mx-20" id="projects">
+<section class="mx-10 mb-20 md:mx-20 dark:text-white" id="projects">
     <h1 class="font-bold text-center text-3xl sm:text-start lg:text-4xl py-5">🚀 Projects</h1>
     <div class="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map(({name, description, repository, image, techStack}) => (
-            <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black transition">
+            <div class="bg-gray-100 border-2 border-gray-100 h-auto rounded-md p-8 hover:border-black transition dark:bg-slate-800 dark:border-slate-800 dark:hover:border-white">
                 <a href={repository} target="_blank">
                     <Image class="rounded-md" src={image} alt={name} loading="lazy" />
                 </a>
